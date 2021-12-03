@@ -1,0 +1,331 @@
+\documentclass[11pt]{article}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage[brazil]{babel}
+\usepackage{parskip}
+\usepackage[tmargin=1.5in, lmargin=1.25in, rmargin=1.25in, bmargin=1.0in]{geometry}
+
+\title{Sequências e Progressões}
+\author{Mickael Lima}
+\date{Dezembro, 2021}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Sequências}
+
+Define-se sequências numéricas como todo conjunto formado por meio de uma ``lógica'' por trás (semelhante à funções). A ``lógica'' é chamada de Lei de Formação, esta é apresentada de três formas diferentes.
+
+\subsection{Tipos de Lei de Formação}
+
+\subsubsection{Fórmula de Recorrência}
+
+Nesse exemplo, a lei de formação é apresentada da seguinte forma: mostra-se inicialmente um método para identificar o primeiro número da sequência (por exemplo, $a_{1}$), e outro para calcular qualquer outro termo a partir desse $a_{1}$ pelo anterior $a_{n - 1}$
+
+\begin{itemize}
+
+  \item Escreva a sequência finita $f$ obedecendo à seguinte fórmula de recorrência: $a_{1} = 2$ e $a_{n - 1} + 3 \hspace{0.1cm} | \hspace{0.1cm} \forall n \in \{2, 3, 4\}$
+\end{itemize}
+
+Por hora, definido $a_{1} = 2$, concluí-se que $a_{2} = a_{1} + 3$ (lei de formação dada), portanto $a_{2} = 2 + 3 = 5$, executando para $a_{3}$ e $a_{4}$ obteremos o conjunto $f$ da sequência formada.
+
+\[f = \{2, 5, 8, 11\}\]
+
+\subsubsection{Termo em função de sua posição $n$}
+
+Esse método permite ser direto na formulação da lei que rege a sequência. É dado uma fórmula que calcula $a_{n}$ em função de $n$ apenas (e sem a necessidade de conhecer $a_{1}$, como na forma anterior)
+
+
+\begin{tcolorbox}[colback=LightYellow]
+\begin{itemize}
+    \item Escrever o conjunto $f$ seguindo $a_{n} = 2^{n}$ para $n = \{1, 2, 3\}$
+
+        \begin{itemize}
+                \item $2^{1} = 2$
+                \item $2^{2} = 4$
+                \item $2^{3} = 8$
+                \item $f = \{2, 4, 8\}$
+        \end{itemize}
+\end{itemize}
+\end{tcolorbox}
+
+\subsubsection{Propriedade da Sequência}
+
+Esse modo consiste em escrever por extenso quais propriedades aquela sequência deverá ter, e montá-la a partir disso. Um exemplo dessa aplicação: ``Montar uma sequência infinita $f$ com os números primos na ordem crescente'' (já que não é possível escrever algo semelhante utilizando-se dos dois modos anteriores).
+
+\section{Progressão Aritmética}
+
+A progressão aritmética é um caso direto da aplicação da fórmula de recorrência apresentada na sessão anterior. Uma sequência do tipo P.A é montada a partir de duas afirmações.
+
+\begin{equation*}
+\begin{cases}
+
+  a_{1} = a \\
+  a_{n} = a_{n - 1} + r \\
+
+\end{cases}
+\end{equation*}
+
+Logicamente, $n$ é um número real e maior ou igual a 2. Os elementos $a, r$ são números reais dados. Isso significa que, em uma sequência do tipo P.A, o próximo termo é igual ao termo anterior somado com uma constante $r$ (razão). \textbf{Esta razão pode ser obtida subtraíndo o próximo elemento com o anterior}.
+
+\begin{tcolorbox}[colback=LightGreen]
+\begin{itemize}
+        \item $f = \{1, 3, 5, 7, 9, \dots\}$, onde $a_{1} = 1$ e $r = 2$ (notando sempre que o próximo elemento é a soma do anterior com 2)
+
+        \item $f = \{-2, -4, -6, -8\}$, ($a_{1} = (-2)$ e $r = (-2)$)
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Classificação}
+
+As classificações são simples e direta:
+
+\begin{tcolorbox}[colback=LightGreen]
+\begin{itemize}
+        \item Crescente: Quando o próximo termo é maior que o anterior (ou seja, $r > 0$)
+\end{itemize}
+
+Essa condição só ocorre estritamente para $r$ positivo. Tomamos $f = \{a_{1}, a_{1} + r\}$, nesse contexto, afirmaremos
+
+\[a_{1} + r > a_{1}\]
+\[r > 0\]
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=LightGreen]
+\begin{itemize}
+  \item Constante: $r = 0$
+\end{itemize}
+
+Nesse caso, não há uma variação por toda a sequência. Tomando a mesma sequência $f$ anterior, esperamos que o próximo termo seja igual ao primeiro:
+
+\[a_{1} + r = a_{1}\]
+\[r = 0\]
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=LightGreen]
+\begin{itemize}
+  \item Descrescente: O próximo termo é menor que o anterior ($r < 0$), visualização análoga ao item crescente.
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Notações Úteis}
+
+A fim de obter uma P.A ``forçadamente'' é interessante escrever a seguinte notação (no exemplo abaixo, pelo menos o 3 primeiros termos).
+
+\begin{tcolorbox}[colback=LightGreen]
+\[f = \{x - r,\hspace{0.1cm} x,\hspace{0.1cm} x + r\}\]
+\[f = \{x,\hspace{0.1cm} x + r,\hspace{0.1cm} x + 2r\}\]
+\end{tcolorbox}
+
+Uma questão exemplo envolvendo a manipulação da P.A deste modo.
+
+\begin{tcolorbox}[colback=LightYellow]
+\begin{itemize}
+  \item Determine $a$ para que $\{a^{2},\hspace{0.1cm} (a + 1)^{2}\hspace{0.1cm}, (a + 5)^{2}\}$ seja uma P.A
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=LightYellow]
+Começaremos igualando o elemento em comum: a razão. Nesse modo, $r$ pode ser obtida subtraíndo $(a + 1)^{2}$ de $a^{2}$, mas também pode ser obtida pela subtração de $(a + 5)^{2}$ de $(a + 1)^{2}$.
+
+\[(a + 1)^{2} - a^{2} = (a + 5)^{2} - (a + 1)^{2}\]
+
+Desenvolvendo os termos
+
+\[(a^{2} + 2a + 1) - a^{2} = (a^{2} + 10a + 25) - (a^{2} + 2a + 1)\]
+\[2a + 1 = 10a + 25 - 2a - 1\]
+\[-6a = 23\]
+\[a = -\frac{23}{6}\]
+
+Portanto, $a$ deverá assumir o valor de $-23/6$ para que a sequência dada seja uma P.A, a partir da técnica ilustrada.
+\end{tcolorbox}
+
+\subsection{Termo Geral da P.A}
+
+Na sessão referente à introdução da progressão aritmética, foi destacado a lei de formação por meio da recorrência. É possível expressar o valor de $a_{n}$ a partir de alguns elementos já conhecidos ($a_{1}$ e $r$). É sabido que
+
+\begin{tcolorbox}[colback=LightGreen]
+
+\begin{equation*}
+\begin{cases}
+  a_{1} \\
+  a_{2} = a_{1} + r \\
+  a_{3} = a_{2} + r \\
+  a_{4} = a_{3} + r \\
+  \dots \\
+  a_{n} = a_{n - 1} + r \\
+\end{cases}
+\end{equation*}
+
+\end{tcolorbox}
+
+A partir disso, somam-se os termos $a_{2}$ até $a_{n}$, e após isso, é estabelecido outra expressão de mesmo valor que essa soma
+
+
+\begin{tcolorbox}[colback=LightGreen]
+\begin{equation*}
+\begin{cases}
+  a_{2} + a_{3} + a_{4} + \dots + a_{n} \\
+  a_{1} + a_{2} + a_{3} + a_{4} + \dots + a_{n - 1} + (n - 1)\cdot r \\
+\end{cases}
+\end{equation*}
+
+\[
+  (a_{2} + a_{3} + a_{4} + \dots + a_{n - 1}) + a_{n} = a_{1} + (a_{2} + \dots + a_{n-1}) + (n - 1)\cdot r
+\]
+\end{tcolorbox}
+
+Os termos destacados entre os parênteses naturalmente irão se anular, forma-se então a fórmula geral do enésimo termo de uma progressão aritmética.
+
+\begin{tcolorbox}[colback=LightBlue]
+\[a_{n} = a_{1} + (n - 1)r\]
+\end{tcolorbox}
+
+Outro meio de entender é considerar que o termo $a_{n}$ é igual ao primeiro termo conhecido da P.A somado com o número de vezes que a razão $r$ foi computada ($n - 1$ ocorre pois $a_{1}$ já fora contado, portanto deverá ficar de fora). A demonstração da validade desse teorema é dada na página 18 do FME 4 por meio de indução finita.
+
+\subsection{Interpolação Aritmética}
+
+Em toda progressão aritmética finita, há dois termos destacáveis que são chamados de \textbf{extremos}, sendo eles o primeiro e último termo de uma P.A. Naturalmente, esses termos são, respectivamente, $a_{1}$ e $a_{n}$. Os elementos que ficam entre esses valores são chamados de \textbf{meios}. A interpolação (também chamada de inserção ou intercalação) aritmética consiste em ``gerar'' uma P.A com extremos já definidos com $k$ elementos no meio. Para tal feito, primeiro é necessário isolar a razão $r$ na fórmula.
+
+
+\begin{tcolorbox}[colback=LightGreen]
+\[a_{n} = a_{1} + (n - 1)r\]
+\[a_{n} - a_{1} = (n - 1)r\]
+\[r = \frac{a_{n} - a_{1}}{n - 1}\]
+\end{tcolorbox}
+
+Definida a razão, pode-se montar a sequência com $k$ números.
+
+\begin{tcolorbox}[colback=LightYellow]
+\begin{itemize}
+        \item Interpolar 3 números entre 1 e 2, formando uma P.A.
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=LightYellow]
+Inicialmente, teremos $f = \{1, x, y, z, 2\}$, sendo que a sequência $x, y, z$ ($n = 5$, já que é o total de termos da sequência) combinado com os extremos devem formar uma progressão aritmética. Calcula-se $r$.
+
+\[r = \frac{2 - 1}{5 - 1} = \frac{1}{4}\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=LightYellow]
+\begin{equation*}
+  \begin{cases}
+    a_{1} = 1 \\
+    x = 1 + \frac{1}{4} \Rightarrow \frac{5}{4} \\
+    y = 1 + 2\frac{1}{4} \Rightarrow \frac{6}{4} \\
+    z = 1 + 3\frac{1}{4} \Rightarrow \frac{7}{4} \\
+    a_{n} = 2 \\
+  \end{cases}
+\end{equation*}
+
+Os elementos $x, y, z$ foram calculados a partir da fórmula de $n$ termos de uma P.A. A partir disso, após a interpolação encontra-se a seguinte sequência.
+
+\[f = \left(1, \frac{5}{4}, \frac{6}{4}, \frac{7}{4}, 2\right)\]
+\end{tcolorbox}
+
+\subsection{Soma de $n$ termos}
+
+\subsubsection{Teorema 1 - Soma dos $n$ Inteiros}
+A soma dos $n$ primeiros números inteiros positivos é dada pela expressão
+
+\begin{tcolorbox}[colback=LightBlue]
+\[S = \frac{n(n + 1)}{2}\]
+\end{tcolorbox}
+
+A demonstração pode ser feita por indução infinita.
+
+\begin{tcolorbox}[colback=LightYellow]
+\begin{itemize}
+  \item $\frac{1(1 + 1)}{2}$, válido para $n = 1$
+  \item Admite-se a validade para $n = p$
+        \[1 + 2 + 3 + \dots + p = \frac{p(p + 1)}{2}\]
+  \item Verifica-se a validade para $p + 1$
+        \[1 + 2 + 3 + \dots + p + (p + 1) \Leftrightarrow \frac{p(p + 1)}{2} + (p + 1)\]
+        \[\frac{p(p + 1) + 2(p + 1)}{2} \Leftrightarrow \frac{(p^{2} + 3p + 2)}{2}\]
+        \[\frac{(p + 1)(p + 2)}{2}\]
+\end{itemize}
+\end{tcolorbox}
+
+\subsubsection{Teorema 2 - Soma dos $n$ termos da P.A}
+
+Aplicando o teorema 1 anterior, podemos escrever a soma de uma P.A na forma genérica
+
+\begin{tcolorbox}[colback=LightBlue]
+\[S_{n} = a_{1} + \left(\frac{n(n - 1)}{2}\right)\cdot r\]
+\end{tcolorbox}
+
+Isso ocorre, pois
+
+\begin{tcolorbox}[colback=LightGreen]
+\begin{equation*}
+\begin{cases}
+  a_{1} (+) \\
+  a_{1} + r (+) \\
+  a_{1} + 2r (+) \\
+  a_{1} + 3r (+) \\
+  \dots \\
+  a_{n} = a_{1} + (n - 1)r \\
+  \hline
+  a_{1} + a_{2} + a_{3} + \dots + a_{n} \Leftrightarrow (a_{1} + a_{1} \dots) + [r + 2r + 3r + \dots (n - 1)r]\\
+\end{cases}
+\end{equation*}
+\end{tcolorbox}
+
+Considerando que $(a_{1} + a_{1} \dots)$ é repetido $n$ vezes. Simplificando a expressão, chegaremos em
+
+\begin{tcolorbox}[colback=LightYellow]
+\[(a_{1}\cdot n) + [1 + 2 + \dots + (n - 1)]r\]
+\end{tcolorbox}
+
+Nota-se que $[1 + 2 + 3 + \dots + (n - 1)]$ é a soma dos primeiros $n$ inteiros (teorema 1), portanto chega-se a fórmula apresentada no inicio dessa sessão.
+
+\subsubsection{Teorema 3 - Fórmula Final}
+
+Ainda é possível ``simplificar'' a fórmula anterior algebricamente
+
+\begin{tcolorbox}[colback=LightYellow]
+\[S_{n} = a_{1} \cdot n + \frac{n(n + 1)}{2}\cdot r\]
+\[S_{n} = \frac{a_{1}\cdot 2n + n(n + 1)r}{2}\]
+\[S_{n} = \frac{n[2\cdot a_{1} + (n - 1)r]}{2}\]
+\[S_{n} = \frac{n[a_{1} + (a_{1} + (n - 1)r)]}{2}\]
+\end{tcolorbox}
+
+A quebra de $2 a_{1}$ para $a_{1} + a_{1}$ é necessário para poder reescrever a expressão da seguinte forma
+
+\begin{tcolorbox}[colback=LightBlue]
+\[S_{n} = \frac{n(a_{1} + a_{n})}{2}\]
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=LightYellow]
+\begin{itemize}
+  \item Calcular as soma dos 25 primeiros termos da P.A $f = (1, 7, 13, \dots)$
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=LightYellow]
+
+O valor de $a_{1}$ é 1 e a razão é $r = (7 - 1) = 6$. Naturalmente, podemos computar o valor de $a_{25}$ para usar na fórmula.
+
+\[a_{25} = 1 + (24)\cdot 6 \Leftrightarrow 145\]
+
+A partir disso
+
+\[S_{25} = \frac{25(1 + 145)}{2} = 1825\]
+\end{tcolorbox}
+
+O próximo tópico de sequência é \textbf{progressão geométrica}
+
+\end{document}
