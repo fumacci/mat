@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage[brazil]{babel}
+\usepackage{parskip}
+\usepackage[tmargin=1.5in, lmargin=1.25in, rmargin=1.25in, bmargin=1.0in]{geometry}
+
+\title{Sequências e Progressões II}
+\author{Mickael Lima}
+\date{Dezembro, 2021}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Progressão Geométrica}
+
+A progressão geométrica é outro tipo de progressão, semelhante à aritmética. É definida pela fórmula de recorrência ilustrada por
+
+\begin{equation*}
+\begin{cases}
+  a_{1} \\
+  a_{n} = a_{n - 1} \cdot q
+\end{cases}
+\end{equation*}
+
+Sendo $a, q$ números reais fornecidos (ou pelo menos implicito, no caso de $q$). Sendo assim, uma P.G é toda sequência a qual o próximo termo $a_{n}$ seja igual ao termo anterior $a_{n - 1}$ multiplicado por uma constante $q$ (que equivale ao $r$ da P.A).
+
+\subsection{Classificações}
+
+As P.Gs são classificadas de 5 modos diferentes.
+
+\begin{itemize}
+        \item Crescente: o próximo termo é maior que o anterior
+        \begin{equation*}
+        \begin{align*}
+          a_{n} &> a_{n - 1} \\
+          a_{n - 1} \cdot q &> a_{n - 1} \\
+          q &> \frac{a_{n - 1}}{a_{n - 1}} \\
+          q &> 1 \\
+        \end{align*}
+        \end{equation*}
+\end{itemize}
+
+Nesse caso, a P.G será crescente quando $q > 1$ \textbf{e somente para sequências positivas}. Para casos em que $a_{1}$ é negativo, vale a relação $0 < q < 1$.
+\begin{itemize}
+  \item Constante: Há duas situações em que isso acontece.
+        \begin{itemize}
+                \item Quando $q = 1$ (já que não haverá variação na multiplicação de $a_{n}$ e $a_{n - 1}\cdot q$).
+                \item Quando $a_{1} = 0$ (já que multiplicar por zero a deixará constante).
+        \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+  \item Decrescente: há dois casos para se analisar (semelhante à crescente).
+        \begin{itemize}
+                \item P.G positiva: será decrescente para $0 < q < 1$
+                \item P.G negativa: será decrescente para $q > 1$
+        \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+  \item Alternantes: o próximo termo tem sinal contrário ao anterior. Isso ocorre sempre que $q < 0$, forçando a alternância de sinais.
+
+  \item Estacionárias: Quando $q = 0$ e $a_{1} \neq 0$, forçando-a a ficar constante após o primeiro termo.
+\end{itemize}
+
+
+
+\end{document}
