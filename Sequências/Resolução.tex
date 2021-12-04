@@ -107,4 +107,39 @@ A P.A se estabelecerá com a existência de $r$. Utilizando a mesma técnica da 
 \[l = 2\sqrt{2} - 1\]
 \end{tcolorbox}
 
+\subsubsection{Questão 4}
+
+\begin{tcolorbox}[colback=LightYellow]
+\begin{itemize}
+  \item Hipótese: $\Rightarrow f = (a, b, c)$ é uma P.A
+  \item Tese: $\Rightarrow g = (a^{2}bc, ab^{2}c, abc^{2})$ é uma P.A
+\end{itemize}
+\end{tcolorbox}
+
+A hipótese afirma que a sequência é, de fato, uma P.A. Isso permite-nos concluir que $b - a = c - b$. Se todos os 3 primeiros elementos forem multiplicados por $abc$, é necessário verificar se essa igualdade mantem-se juntamente com essa proporção. Na P.A da tese, tem-se
+
+\[g = (a^{2}bc, ab^{2}c, abc^{2})\]
+
+Supondo que ela, de fato, é uma P.A, a igualdade $ab^{2}c - a^{2}bc = abc^{2} - ab^{2}c$ é válida. No entanto, isso nada mais é que a igualdade da sequência $f$ multiplicada por $abc$ também. Outro modo de ver isso é considerar o seguinte:
+
+\begin{tcolorbox}[colback=LightYellow]
+\[ab^{2}c - a^{2}bc = abc(b - a)\]
+\[abc^{2} - ab^{2}c = abc(c - b)\]
+\end{tcolorbox}
+
+O que mantem a mesma relação.
+
+\subsubsection{Questão 5}
+
+Temos inicialmente $a_{1} = 60$ e uma razão $r$ negativa igual a $-7$. Haverá o enésimo termo a qual $a_{n}$ ficará negativo, que pode ser ilustrado por $a_{n} = 60 + (n - 1)\cdot -7$. Fixaremos $a_{n} < 0$ e trabalharemos com essa inequação.
+
+\[60 + (n - 1)\cdot -7 < 0\]
+\[60 - 7n + 7 < 0\]
+\[67 - 7n < 0\]
+\[-7n < -67\]
+\[n > \frac{67}{7} \approx 9.5\]
+
+Como $n$ obrigatoriamente é um número inteiro, admitimos $n \geq 10$. Portanto, a sequência ficará negativa após o décimo termo. Isso é facilmente provado ao verificar $a_{10}$.
+
+\[a_{10} = 60\cdot (9)\cdot -7 = (60 - 63) = (-3)\]
 \end{document}
