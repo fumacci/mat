@@ -9,7 +9,7 @@ Repositório pra guardar quaisquer anotações originais minhas de diversos assu
 
 * [100%] Teoria
 * [30%] Lista de exercícios
-* [10%] Resolução da lista
+* [50%] Resolução da lista
 
 ### Progressão Geométrica
 
