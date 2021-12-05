@@ -190,7 +190,75 @@ Entre 100 e 1000, sabe-se que há 999 números. Por partes, chamaremos a sequên
         \[n = 300\]
 \end{itemize}
 
+\subsubsection{Questão 8}
 
+A P.A que representaria a sequência dos 200 primeiros números ímpares positivos é gerada com $a_{1} = 1$ e $r = 2$. Utiliza-se a fórmula
 
+\[S_{n} = \frac{n(a_{1} + a_{n})}{2}\]
 
+Determina-se inicialmente $a_{n} = 1 + (200 - 1)2 \Leftrightarrow 399$, após isso, na fórmula
+
+\[S_{200} = \frac{200(1 + 399)}{2} \Leftrightarrow 100(400) = 40000\]
+
+Para calcularmos a soma de $n$ elementos dessa sequência já estabelecida, seguimos os mesmos passos
+
+\[a_{n} = 1 + 2(n - 1) \Leftrightarrow 2n - 1\]
+
+\[S_{n} = \frac{n(1 + 2n - 1)}{2} \Leftrightarrow \frac{2n^{2}}{2} = n^{2}\]
+
+\subsubsection{Questão 9}
+
+A fonte está a 15 metros da primeira parte que será ``regada''. Quando chegar nas primeiras 3 roseiras, andará mais 2 metros para regá-las (vai regar a primeira roseira de imediato, andará até a segunda (1 metro) e até a terceira (1 metro)). Depois disso, terá que voltar para reabastecer a água, voltando todo o caminho novamente, totalizando
+
+\[15 + 2 + 2 + 15 = 34\]
+
+Esse é o trajeto realizado inicialmente, e o primeiro termo da P.A ($a_{1} = 34$). A cada viagem, o percurso aumenta em 6 metros (já que são 3 metros a mais na ida e 3 metros a mais na volta, adicionados com os caminhos anteriores), portanto $r = 6$. Como ele rega 3 roseiras a cada 1 viagem, então ele fará no total 20 viagens para regar todas as 60 ($n = 20$). Montada a P.A, utiliza-se a mesma técnica da questão anterior.
+
+\[a_{20} = 34 + (19)6 = 148\]
+\[S_{20} = \frac{20(34 + 148)}{2} = 10(182) = 1820\]
+
+Portanto, o jardineiro andou 1820 metros.
+
+\subsubsection{Questão 10 (*)}
+
+A primeira afirmativa da questão diz que o somatório dos 10 primeiros termos da P.A dada é igual a expressão
+
+\[10 + 25d\]
+
+E que o somatório dos 50 primeiros termos dessa mesma P.A equivale à 4550. É possível igualar esses valores com $S_{10}$ e $S_{50}$ para descobrir os termos notáveis.
+
+\[\frac{n(a_{1} + a_{n})}{2} = 10 + 25d\]
+
+Porém $a_{n} = a_{1} + (n - 1)d$ ($d$ é a razão $r$ da questão) e $n = 10$ para esse caso
+
+\[\frac{10(a_{1} + a_{1} + 9d)}{2} = 10 + 25d\]
+\[\frac{10(2a_{1} + 9d)}{2} = 10 + 25d\]
+\[5(2a_{1} + 9d) = 10 + 25d\]
+\[10a_{1} + 45d = 10 + 25d\]
+\[10a_{1} = 10 - 20d\]
+\[a_{1} = \frac{10 - 20d}{10} \Leftrightarrow 1 - 2d\]
+
+Achado uma expressão que relaciona $a_{1}$ com $d$ para o somatório dos 10 primeiros termos ($a_{1} = 1 - 2d$), agora é necessário descobrir outra relação no somatório de 50 para obter um sistema.
+
+\[\frac{50(a_{1} + a_1 + 49d)}{2} = 4550\]
+\[\frac{50(2a_{1} + 49d)}{2} = 4550\]
+\[25(2a_{1} + 49d) = 4550\]
+\[50a_{1} + 1225d = 4550\]
+\[a_{1} = \frac{4550 - 1225d}{50} \Leftrightarrow \frac{4550}{50} - \frac{1225d}{50}\]
+\[a_{1} = 91 - \frac{49d}{2}\]
+
+Podemos, por fim, igualar essas duas relações e descobrir o valor de $d$.
+
+\[91 - \frac{49d}{2} = 1 - 2d\]
+\[-\frac{49d}{2} = -2d - 90\]
+\[\frac{49d}{2} = 2d + 90\]
+\[49d = 2(2d + 90)\]
+\[49d = 4d + 180\]
+\[45d = 180\]
+\[d = 4\]
+
+Substituindo $d$ na expressão mais simples $1 - 2d$ teremos $a_{1} = -7$. A expressão pedida é
+\[4 - (-7) = 11\]
+
+Letra D.
 \end{document}
