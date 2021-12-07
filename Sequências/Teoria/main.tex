@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+
+% -- color boxes
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+
+% -- formatting stuff
+\usepackage[tmargin=1.5in, lmargin=1.25in, rmargin=1.25in, bmargin=1.0in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+
+% -- math stuff
+\usepackage{amsmath, amsfonts, amssymb}
+
+% -- language and font
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{indentfirst}
+\usepackage[brazil]{babel}
+
+\begin{document}
+
+\definecolor{titlepagecolor}{HTML}{F6D5A8}
+\begin{titlepage}
+  \newgeometry{left=7.5cm}
+  \pagecolor{titlepagecolor}
+  \noindent
+  \makebox[0pt][l]{\rule{1.9\textwidth}{1pt}}
+  \par
+  \noindent
+  \textbf{{\huge{Progressão Aritmética e Geométrica}}}
+  \vfill
+  \noindent
+  {\huge Teoria e Resumo}
+  \vskip\baselineskip
+  \noindent
+  \Large{Dezembro, 2021}
+\end{titlepage}
+\nopagecolor
+
+\tableofcontents
+\input{contents/P.A.tex}
+\input{contents/P.G.tex}
+
+\end{document}

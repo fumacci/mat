@@ -1,27 +1,3 @@
-\documentclass[11pt]{article}
-
-\usepackage[svgnames]{xcolor}
-\usepackage{tcolorbox}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{indentfirst}
-\usepackage{microtype}
-\usepackage{amsmath}
-\usepackage[brazil]{babel}
-\usepackage{parskip}
-\usepackage[tmargin=1.5in, lmargin=1.25in, rmargin=1.25in, bmargin=1.0in]{geometry}
-
-\title{Sequências e Progressões II}
-\author{Mickael Lima}
-\date{Dezembro, 2021}
-
-\begin{document}
-
-\maketitle
-\pagebreak
-\tableofcontents
-\pagebreak
-
 \section{Progressão Geométrica}
 
 A progressão geométrica é outro tipo de progressão, semelhante à aritmética. É definida pela fórmula de recorrência ilustrada por
@@ -106,6 +82,8 @@ A sequência em P.G $f$ terá a forma de $f = \{(1 + x), (9 + x), (15 + x)\}$. O
 
 Portanto, constrói-se a seguinte expressão
 
+\end{tcolorbox}
+\begin{tcolorbox}[colback=LightYellow]
 \[(9 + x)^{2} = (15 + x)(1 + x)\]
 \[81 + 18x + x^{2} = 15 + 15x + x + x^{2}\]
 \[81 + 18x = 15 + 16x\]
@@ -274,8 +252,10 @@ Considerando uma progressão geométrica com $a_{1} = \frac{1}{2}$ e $q = \frac{
 
 É perceptível que $n$ e $a_{n}$ são valores inversamente proporcionais. Ou seja, quanto maior $n$, menor será $a_{n}$. A partir de um certo ponto, $n$ será tão grande a ponto de $a_{n}$ chegar muito perto de 0. Um exemplo disso: podemos computar a partir de qual termo $n$ os valores de $a_{n}$ serão menores que $0.001$
 
+\begin{tcolorbox}[colback=LightYellow]
 \[\frac{1}{2^{n}} - 0 < \frac{1}{1000}\]
 \[2^{n} > 1000\]
+\end{tcolorbox}
 
 Nesse contexto, determinamos que o elemento da sequência $a_{n}$ ficará menor que 0.001 em algum $n$ entre 9 e 10. Porém, como $n$ é obrigatorialmente inteiro, teremos certeza que ficará menor a partir de $n > 9$ (já que $2^{9} = 512$). Se chamarmos a aproximação pedida (no caso, foi 0.001) de $\varepsilon$ ($> 0$), é possível encontrar um número $n_{o}$ natural tal que
 
@@ -283,7 +263,9 @@ Nesse contexto, determinamos que o elemento da sequência $a_{n}$ ficará menor 
 
 Quando $n > n_{o}$. Sendo $n$ o número real (que no caso anterior seria $n$ tal qual $9 < n < 10$) e $n_{o}$ o número natural usado no final (no caso anterior $n = 9$). A sequência dada se aproximará de 0 quando $n$ tender ao infinito.
 
+\begin{tcolorbox}[colback=LightYellow]
 \[\lim_{n\to \infty} \frac{1}{2^{n}} = 0\]
+\end{tcolorbox}
 
 \subsubsection{Definição}
 
@@ -342,5 +324,3 @@ Em resumo, seja uma P.A infinita genérica (obecedendo os termos já colocados),
 \begin{tcolorbox}[colback=LightYellow]
 \[S_{n} = \frac{a_{1}}{1 - q}\]
 \end{tcolorbox}
-
-\end{document}

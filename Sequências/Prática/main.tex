@@ -1,0 +1,47 @@
+\documentclass[11pt]{exam}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage[brazil]{babel}
+\usepackage{parskip}
+
+% -- question choice correct align
+\usepackage{xpatch}
+\xpatchcmd{\oneparchoices}{\penalty -50\hskip 1em plus 1em\relax}{\hfill}{}{}
+\xpatchcmd{\oneparchoices}{\penalty -50\hskip 1em plus 1em\relax}{\hfill}{}{}
+
+\renewcommand\choicelabel{(\alph{choice})}
+\begin{document}
+
+% .. capa
+
+\definecolor{titlepagecolor}{HTML}{F6D5A8}
+\begin{titlepage}
+  \newgeometry{left=7.5cm}
+  \pagecolor{titlepagecolor}
+  \noindent
+  \makebox[0pt][l]{\rule{1.9\textwidth}{1pt}}
+  \par
+  \noindent
+  \textbf{{\huge{Lista de Exercício com Resolução}}}
+  \vfill
+  \noindent
+  {\huge Progressão Aritmética e Geométrica}
+  \vskip\baselineskip
+  \noindent
+  \Large{Dezembro, 2021}
+\end{titlepage}
+
+\nopagecolor
+
+\input{contents/L.E - Progressões.tex}
+\pagebreak
+\input{contents/Resolução.tex}
+\end{document}
